@@ -1,0 +1,16 @@
+/**
+ * @author UMU618 <umu618@hotmail.com>
+ * @copyright MEET.ONE 2019
+ * @description Use block-always-using-brace npm-coding-style.
+ */
+
+'use strict'
+
+const DING_TALK_TOKEN = ''
+
+module.exports = Object.freeze({
+  url: 'https://mainnet.meet.one'
+  , maxRetry: 3
+  , dingtalkInfoToken: DING_TALK_TOKEN
+  , dingtalkErrorToken: DING_TALK_TOKEN
+})

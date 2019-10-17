@@ -1,0 +1,5 @@
+[
+  {"account": "m", "balance": 1, "cpu": 2000, "ram": 4096},
+  {"account": "w.w", "ram": 4096},
+  {"account": "bank.m", "cpu": 2000, "ram": 4096}
+]
