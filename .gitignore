@@ -64,3 +64,4 @@ yarn.lock
 # Project secret
 conf.js
 accounts.json
+tables.json
