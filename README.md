@@ -14,6 +14,7 @@ yarn install
 
 ```
 cp accounts.json.example accounts.json
+cp tables.json.example tables.json
 cp conf.js.example conf.js
 ```
 
