@@ -57,8 +57,8 @@ function queryAccounts() {
       retry = 0
       if (res) {
         if (ac.balance && parseFloat(res.core_liquid_balance) < ac.balance) {
-          infoMessage += '\n  ' + ac.account + ' balance is less then'
-            + ac.balance + ' EOS.'
+          infoMessage += '\n  ' + ac.account + ' balance is '
+            + res.core_liquid_balance + ', less then' + ac.balance + '.'
         }
         if (ac.cpu && res.cpu_limit.available < ac.cpu) {
           infoMessage += '\n  ' + ac.account + ' CPU is less then' + ac.cpu
@@ -102,7 +102,8 @@ function queryTables() {
         const v = parseFloat(res.rows[0][t.rowKey])
         if (v < parseFloat(t.rowValue)) {
           infoMessage += '\n  ' + t.code + '/' + t.scope + '/' + t.table + '/'
-            + t.key + '/' + t.rowKey + ' is less then ' + t.rowValue + '.'
+            + t.key + '/' + t.rowKey + ' is ' + res.rows[0][t.rowKey]
+            + ', less then ' + t.rowValue + '.'
         }
       }
 
