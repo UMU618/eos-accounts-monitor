@@ -7,10 +7,13 @@
 'use strict'
 
 const DING_TALK_TOKEN = ''
+const DING_TALK_SECRET = ''
 
 module.exports = Object.freeze({
   url: 'https://mainnet.meet.one'
   , maxRetry: 3
   , dingtalkInfoToken: DING_TALK_TOKEN
+  , dingtalkInfoSecret: DING_TALK_SECRET
   , dingtalkErrorToken: DING_TALK_TOKEN
+  , dingtalkErrorSecret: DING_TALK_SECRET
 })

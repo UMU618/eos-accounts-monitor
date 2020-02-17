@@ -128,13 +128,13 @@ function queryTables() {
 
 function notify() {
   if (infoMessage) {
-    alerts.sendDingtalk(conf.dingtalkInfoToken
+    alerts.sendDingtalk(conf.dingtalkInfoToken, conf.dingtalkInfoSecret
       , (new Date).toJSON() + ', ' + os.hostname() + ', ' + ME + ':'
       + infoMessage)
   }
 
   if (errorMessage) {
-    alerts.sendDingtalk(conf.dingtalkErrorToken
+    alerts.sendDingtalk(conf.dingtalkErrorToken, conf.dingtalkErrorSecret
       , (new Date).toJSON() + ', ' + os.hostname() + ', ' + ME + ':'
       + errorMessage)
   }
