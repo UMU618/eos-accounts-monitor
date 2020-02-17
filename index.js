@@ -58,14 +58,14 @@ function queryAccounts() {
       if (res) {
         if (ac.balance && parseFloat(res.core_liquid_balance) < ac.balance) {
           infoMessage += '\n  ' + ac.account + ' balance is '
-            + res.core_liquid_balance + ', less then' + ac.balance + '.'
+            + res.core_liquid_balance + ', less then ' + ac.balance + '.'
         }
         if (ac.cpu && res.cpu_limit.available < ac.cpu) {
-          infoMessage += '\n  ' + ac.account + ' CPU is less then' + ac.cpu
+          infoMessage += '\n  ' + ac.account + ' CPU is less then ' + ac.cpu
             + 'us.'
         }
         if (ac.ram && res.ram_quota - res.ram_usage < ac.ram) {
-          infoMessage += '\n  ' + ac.account + ' RAM is less then' + ac.ram
+          infoMessage += '\n  ' + ac.account + ' RAM is less then ' + ac.ram
             + 'bytes.'
         }
       }
@@ -104,6 +104,9 @@ function queryTables() {
           infoMessage += '\n  ' + t.code + '/' + t.scope + '/' + t.table + '/'
             + t.key + '/' + t.rowKey + ' is ' + res.rows[0][t.rowKey]
             + ', less then ' + t.rowValue + '.'
+            + '\n    Check: https://bloks.io/contract?tab=Tables&table='
+            + t.table + '&account=' + t.code + '&scope=' + t.scope
+            + '&limit=1&lower_bound=' + t.key + '&upper_bound=' + t.key
         }
       }
 
