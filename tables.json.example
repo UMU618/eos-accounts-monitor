@@ -1,4 +1,4 @@
 [
-  {"code": "genereospool", "scope": "genereospool", "table": "bps", "key": "eosiomeetone", "rowKey": "fund", "rowValue": "15"},
+  {"code": "genereospool", "scope": "genereospool", "table": "v3.bps", "key": "eosiomeetone", "rowKey": "fund", "rowValue": "15"},
   {"code": "voteforvalue", "scope": "voteforvalue", "table": "registered", "key": "eosiomeetone", "rowKey": "total_eos", "rowValue": "15"}
 ]
